@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/consumer.js"
+    "lint": "eslint ./src",
+    "lint-fix": "eslint ./src --fix",
+    "start": "nodemon src/consumer.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "yosefadrian",
   "license": "ISC",
   "dependencies": {
     "amqplib": "^0.10.3",
@@ -16,5 +18,13 @@
     "nodemailer": "^6.9.4",
     "nodemon": "^3.0.1",
     "pg": "^8.11.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.45.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^16.0.1",
+    "eslint-plugin-promise": "^6.1.1"
   }
 }

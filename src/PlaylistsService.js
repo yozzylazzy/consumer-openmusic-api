@@ -7,7 +7,7 @@ class PlaylistsService {
 
   async getPlaylistById(playlistId) {
     const query = {
-      text: `SELECT id, name FROM playlists WHERE id = $1`,
+      text: 'SELECT id, name FROM playlists WHERE id = $1',
       values: [playlistId],
     };
     const result = await this._pool.query(query);
